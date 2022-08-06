@@ -1,0 +1,49 @@
+$bg-c1-pink: #b61984;
+$bg-c2-pink: #aa017e;
+$bg-c1-light: #fff;
+$bg-c1-grey: #dcd1f3;
+//
+$text-c1-dark:#181818;
+$text-c2-dark:#191919;
+$text-c1-light:#fff;
+$text-c1-pink:#b61984;
+$text-c2-pink: #aa017e;
+//
+$text-light: 300;
+$text-regular: 400;
+$text-semibold: 600;
+$text-bold: 700;
+//
+$text-mxs: 0.6rem;
+$text-mss: 0.7rem;
+$text-ss: 0.75rem;
+$text-xx: 0.8rem;
+$text-xs: 0.9rem;
+$text-xss: 14px;
+$text-base: 16px;
+$text-l: 1rem;
+$text-xl: 1.1rem;
+$text-2xl: 1.55rem;
+$text-25xl: 30px;
+$text-3xl: 2.5rem;
+$text-3xlm: 3.15rem;
+$text-4xl: 3.8rem;
+//
+@mixin text($fs: $text-l, $fw: $text-regular, $c: $text-c1-dark) {
+    font-size: $fs;
+    font-weight: $fw;
+    color: $c;
+}
+
+@mixin button($fs, $fw, $fc, $bg, $pd, $bd, $br, $bg-hover, $c-hover) {
+    @include text($fs, $fw, $fc);
+    background: $bg;
+    padding: $pd;
+    border: $bd;
+    border-radius: $br;
+    cursor: pointer;
+    &:hover {
+        background-color: $bg-hover;
+        color: $c-hover;
+    }
+}
